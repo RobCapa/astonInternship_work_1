@@ -6,13 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/mainActivity_imageButton_playOrPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainActivity_textView_title"
+            app:srcCompat="@drawable/baseline_play" />
+
+        <ImageButton
+            android:id="@+id/mainActivity_imageButton_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/mainActivity_imageButton_playOrPause"
+            app:layout_constraintEnd_toStartOf="@+id/mainActivity_imageButton_playOrPause"
+            app:layout_constraintTop_toBottomOf="@+id/mainActivity_textView_title"
+            app:srcCompat="@drawable/baseline_previous" />
+
+        <ImageButton
+            android:id="@+id/mainActivity_imageButton_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/mainActivity_imageButton_playOrPause"
+            app:layout_constraintStart_toEndOf="@+id/mainActivity_imageButton_playOrPause"
+            app:layout_constraintTop_toBottomOf="@+id/mainActivity_textView_title"
+            app:srcCompat="@drawable/baseline_next" />
+
+        <TextView
+            android:id="@+id/mainActivity_textView_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
